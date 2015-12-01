@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <title>---=== ATT GÖRA-LISTA ===---</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <a class="navbar-brand" href="#">Att göra-lista</a>
+      </div>
+    </div>
+
+    <section>
+      <div class="outer-container">
+        <div class="add-todo-group input-group input-group-lg">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-list-alt"></i>
+          </span>
+          <input id="newTodo" placeholder="Viktig sak" class="form-control" type="text">
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="button">
+              <i class="glyphicon glyphicon-plus"></i>
+            </button>
+          </span>
+        </div>
+
+        <div id="app"><!-- Här visas Att göra-listan --></div>
+
+        <div class="btn-clear-group">
+          <button class="btn btn-primary btn-clear">Dölj gjorda saker</button>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/template" id="item-template">
+      <span class="input-group-addon">
+        <input <%= completed ? "checked=checked" : "" %> type="checkbox">
+      </span>
+      <input value="<%= val %>" class="form-control<%= completed ? " finished" : "" %>" type="text">
+      <span class="input-group-btn">
+        <button class="btn btn-danger" type="button">
+          <i class="glyphicon glyphicon-remove"></i>
+        </button>
+      </span>
+    </script>
+
+    <script src="js/lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/lib/underscore/underscore-min.js"></script>
+    <script src="js/lib/backbone/backbone-min.js"></script>
+    <script src="js/lib/backbone.localStorage-min.js"></script>
+    <script src="js/models.js"></script>
+    <script src="js/views.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
