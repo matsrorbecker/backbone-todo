@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
 Original work: Copyright (c) 2014 Brian Holt
+
 Modifications: Copyright (c) 2015 Mats Rörbecker
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
