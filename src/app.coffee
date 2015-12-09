@@ -1,3 +1,2 @@
 $ ->
-
-new TodoApp().start()
+    new TodoApp().start()
